@@ -22,7 +22,7 @@ function w3_open_tab_page(page_name)
   document.getElementById(page_name).style.display = "block";
 }
 
-const extent =  [-117.122, 8.442, -86.735, 38.8294];
+const extent = [-117.122, 8.442, -86.735, 38.8294];
 const projection = new ol.proj.Projection({
   code: 'integro-image',
   units: 'pixels',

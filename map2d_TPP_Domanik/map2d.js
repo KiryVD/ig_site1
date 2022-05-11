@@ -1,7 +1,7 @@
 function w3_side_bar_open() 
 {
-  document.getElementById("main_form").style.marginRight = "25%";
-  document.getElementById("side_bar").style.width = "25%";
+  document.getElementById("main_form").style.marginRight = "50%";
+  document.getElementById("side_bar").style.width = "50%";
   document.getElementById("side_bar").style.display = "block";
   document.getElementById("open_side_bar").style.display = 'none';
 }

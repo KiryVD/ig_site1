@@ -17,43 +17,57 @@
     <script src="pnt_objs.js"/></script>
   </head>
   <body>
-    <div class="w3-container w3-blue">
-      <h1>Москва</h1>
-    </div>
-    <div class="w3-cell-row">
-      <div class="w3-container w3-cell w3-mobile" style="padding:0;">
-        <div id="map" class="map w3-border"></div>
-        <div id="modal_form" class="w3-modal">
-          <div class="w3-modal-content">
-            <div class="w3-container w3-card-4" style="padding:0;">
-              <span onclick="document.getElementById('modal_form').style.display='none'" class="w3-button w3-display-topright">&times;</span>
-              <div class="w3-container w3-middle-align w3-blue">
-                <h4>Информация</h4>
-              </div>
-              <div id="obj_modal_form"></div>
-            </div>
-          </div>
-        </div>        
+  
+    <!-- Begin(side_bar) --> 
+    <div class="w3-sidebar w3-card w3-animate-right" style="display:none;right:0;" id="side_bar">
+      <div class="w3-container w3-blue">
+        <button class="w3-button w3-display-topright" onclick="w3_side_bar_close()">&times;</button>
+      </div>        
+      <div class="w3-bar w3-blue">
+        <div class="w3-bar-item w3-button" onclick="w3_open_tab_page('page_legend')">Легенда</div>
+        <div class="w3-bar-item w3-button" onclick="w3_open_tab_page('page_objinfo')">Объект</div>
+      </div>        
+      <div id="page_legend" class="tab_pages">
+        <div style="overflow:auto;">  
+          <img src="legend.png"/>
+        </div>  
       </div>
-      <div class="w3-container w3-cell w3-mobile" style="width:250px;padding:0;">
-        <div style="height:700px; width:250px; overflow:auto;">  
-          <div class="w3-bar w3-blue">
-            <button class="w3-bar-item w3-button" onclick="openTabPage('page_legend')">Легенда</button>
-            <button class="w3-bar-item w3-button" onclick="openTabPage('page_objinfo')">Объект</button>
-          </div>        
-          <div id="page_legend" class="tab_pages">
-            <img src="legend.png"/>
-          </div>
-          <div id="page_objinfo" class="tab_pages" style="display:none">
-            <div id="obj_info">
+      <div id="page_objinfo" class="tab_pages" style="display:none">
+        <div style="overflow:auto;">  
+          <div id="obj_info"></div>
+        </div>  
+      </div>
+    </div>  
+    <!-- End(side_bar) --> 
+  
+    <!-- Begin(main_form) --> 
+    <div id="main_form">
+      <div class="w3-container w3-blue">
+        <span id="open_side_bar" class="w3-button w3-blue w3-display-topright" onclick="w3_side_bar_open()">&#9776;</span>
+        <h1>Москва</h1>
+      </div>
+      <div id="map" class="map w3-border"></div>
+ 
+      <!-- Begin(modal_form) --> 
+      <div id="obj_modal_form" class="w3-modal">
+        <div class="w3-modal-content">
+          <div class="w3-container w3-card-4" style="padding:0;">
+            <span onclick="document.getElementById('obj_modal_form').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+            <div class="w3-container w3-middle-align w3-blue">
+              <h4>Информация</h4>
             </div>
+            <div id="obj_modal_info"></div>
           </div>
         </div>
+      </div>        
+      <!-- End(modal_form) --> 
+
+      <div class="w3-container w3-right-align w3-xsmall w3-blue">
+        <p class="w3-small">Сделано в <a href="http://www.gis-integro.ru" target="_blank">ГИС Integro</a> <i>отделение Геоинформатики ФГБУ "ВНИГНИ"</i>)</p>
       </div>
     </div>
-    <div class="w3-container w3-right-align w3-xsmall w3-blue">
-      <p class="w3-small">Сделано в <a href="http://www.gis-integro.ru" target="_blank">ГИС Integro</a> (<i>отделение Геоинформатики ФГБУ "ВНИГНИ"</i>)</p>
-    </div>
+    <!-- End(main_form) --> 
+
     <script src="map2d.js"></script>
   </body>
 </html>
