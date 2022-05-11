@@ -1,13 +1,28 @@
-function openTabPage(pageName) {
+function w3_side_bar_open() 
+{
+  document.getElementById("main_form").style.marginRight = "25%";
+  document.getElementById("side_bar").style.width = "25%";
+  document.getElementById("side_bar").style.display = "block";
+  document.getElementById("open_side_bar").style.display = 'none';
+}
+function w3_side_bar_close() 
+{
+  document.getElementById("main_form").style.marginRight = "0%";
+  document.getElementById("side_bar").style.display = "none";
+  document.getElementById("open_side_bar").style.display = "inline-block";
+}
+function w3_open_tab_page(page_name) 
+{
   var i;
   var x = document.getElementsByClassName("tab_pages");
-  for (i = 0; i < x.length; i++) {
+  for (i = 0; i < x.length; i++) 
+  {
     x[i].style.display = "none";
   }
-  document.getElementById(pageName).style.display = "block";
+  document.getElementById(page_name).style.display = "block";
 }
 
-const extent = [-117.122, 8.442, -86.735, 38.8294];
+const extent =  [-117.122, 8.442, -86.735, 38.8294];
 const projection = new ol.proj.Projection({
   code: 'integro-image',
   units: 'pixels',
@@ -329,9 +344,9 @@ function displayFeatureInfo(pixel, clicked) {
   {
     if (feature) {
 //      openInNewTab(feature);
-      const info_modal = document.getElementById('obj_modal_form');
+      const info_modal = document.getElementById('obj_modal_info');
       info_modal.innerHTML = featureToTable(feature);
-      document.getElementById('modal_form').style.display='block';
+      document.getElementById('obj_modal_form').style.display='block';
     } 
   }
  
