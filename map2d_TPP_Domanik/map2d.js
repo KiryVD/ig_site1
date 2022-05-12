@@ -32,7 +32,7 @@ const projection = new ol.proj.Projection({
 var tileIgSource = new ol.source.XYZ(
 {
   url: './{z}/{x}/{y}.png',
-  maxZoom: 8,
+  maxZoom: 5,
   tileSize: 256,
   projection: projection,
 });
@@ -49,7 +49,7 @@ const map = new ol.Map({
     projection: projection,
     center: ol.extent.getCenter(extent),
     zoom: 2,
-    maxZoom: 8,
+    maxZoom: (5+1),
   }),
 });
 

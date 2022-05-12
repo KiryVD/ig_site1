@@ -1,0 +1,2 @@
+var tbl_obj = 
+[{"ID":"1", "WP_NAME":"I like layout", "HLINK":"<a href=\"../layout_Meksika_s_CFO/layout.html\" target=\"_blank\">Мексика с ЦФО</a>"}, {"ID":"2", "WP_NAME":"I like table", "HLINK":"<a href=\"../tbl_cities_dbf/tbl.html\" target=\"_blank\">cities.dbf</a>"}, {"ID":"3", "WP_NAME":"I like Mex", "HLINK":"<a href=\"../map2d_Meksika/map2d.html\" target=\"_blank\">Мексика</a>"}, {"ID":"4", "WP_NAME":"I like CFO", "HLINK":"<a href=\"../map2d_CFO/map2d.html\">ЦФО</a>"}];
